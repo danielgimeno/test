@@ -1,0 +1,98 @@
+<!doctype html>
+
+<head>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+  
+</head>
+<body>
+    <div id="container" style="width: 100%;">
+        <div id="contingresos" style="width: 40%">
+            <canvas id="ingresos"></canvas>
+        </div>
+        
+
+        <div id="contusuarios" style="width: 40%;">
+            <canvas id="usuarios"></canvas></div>
+        
+	</div>
+ 
+<script>
+(function() {
+  var migithub = "https://raw.githubusercontent.com/danielgimeno/test/master/miejemplo.json";
+  $.getJSON( migithub, {})
+    .done(function( ingresos ) {
+        var gringresos = document.getElementById('ingresos');
+        var grusuarios = document.getElementById('usuarios');
+ 
+        var mislabels =[];
+        var midata =[];
+        var usuarios=[];
+        $.each(ingresos, function(i, item) {
+            console.log(item);
+            mislabels.push (item['nombre']);
+            midata.push (item['ingresos']);
+            usuarios.push (item['usuarios']);
+        });
+
+            var misingresos = new Chart(gringresos, {
+                type: 'bar',
+                data: {
+                    labels: mislabels,
+                    datasets: [{
+                        label: 'Ingresos por parking',
+                        data: midata,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                }
+            });
+            var misusuarios = new Chart(grusuarios, {
+                type: 'bar',
+                data: {
+                    labels: mislabels,
+                    datasets: [{
+                        label: 'Usuarios por parking',
+                        data: usuarios,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                }
+            });
+    });
+})();
+</script>
+ 
+</body>
+</html>

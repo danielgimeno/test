@@ -3,36 +3,42 @@
       "parkId": 1,
       "id": 123443433,
       "nombre": "parking1",
-      "estado": true
+      "estado": true,
+      "ingresos":123
     },
     {
         "parkId": 2,
         "id": 1234343,
         "nombre": "parking2",
-        "estado": true
+        "estado": true,
+        "ingresos":1233
       },
       {
         "parkId": 3,
         "id": 1254543,
         "nombre": "parking3",
-        "estado": true
+        "estado": true,
+        "ingresos":456
       },
       {
         "parkId": 4,
         "id": 123433,
         "nombre": "parking4",
-        "estado": true
+        "estado": true,
+        "ingresos":89
       },
       {
         "parkId": 5,
         "id": 1245453,
         "nombre": "parking5",
-        "estado": true
+        "estado": true,
+        "ingresos":97
       },
       {
         "parkId": 6,
         "id": 12454553,
         "nombre": "parking6",
-        "estado": true
+        "estado": true,
+        "ingresos":23
       }
     ]

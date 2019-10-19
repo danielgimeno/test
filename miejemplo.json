@@ -4,41 +4,47 @@
       "id": 123443433,
       "nombre": "parking1",
       "estado": true,
-      "ingresos":123
+      "ingresos":123,
+      "usuarios":389
     },
     {
         "parkId": 2,
         "id": 1234343,
         "nombre": "parking2",
         "estado": true,
-        "ingresos":1233
+        "ingresos":1233,
+        "usuarios":789
       },
       {
         "parkId": 3,
         "id": 1254543,
         "nombre": "parking3",
         "estado": true,
-        "ingresos":456
+        "ingresos":456,
+        "usuarios":489
       },
       {
         "parkId": 4,
         "id": 123433,
         "nombre": "parking4",
         "estado": true,
-        "ingresos":89
+        "ingresos":89,
+        "usuarios":389
       },
       {
         "parkId": 5,
         "id": 1245453,
         "nombre": "parking5",
         "estado": true,
-        "ingresos":97
+        "ingresos":97,
+        "usuarios":189
       },
       {
         "parkId": 6,
         "id": 12454553,
         "nombre": "parking6",
         "estado": true,
-        "ingresos":23
+        "ingresos":23,
+        "usuarios":79
       }
     ]
